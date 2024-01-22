@@ -11,7 +11,14 @@ In this project I explored Suricata, a tool used for monitoring network interfac
   - **Drop**: Generates an alert but drops the traffic, used in IPS mode.
   - **Pass**: Allows traffic to pass through, can override other rules, including drop rules.
   - **Reject**: Blocks traffic and sends a TCP reset packet, stopping the communication.
-- Analyzed an example rule that alerts on specific HTTP traffic based on predefined conditions.
+- Analyzed an example rule below that alerts on specific HTTP traffic based on predefined conditions.
+
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/TtM2Ond.png" alt="Description of Image">
+</div>
+
+- The $HOME_NET variable in Suricata, was defined in the /etc/suricata/suricata.yaml file. For the purposes of this lab, $HOME_NET was set to the 172.21.224.0/20 subnet. Additionally, I learned that using the term 'any' in the context of Suricata rules means that the system captures traffic from any port defined within the $HOME_NET network.
+
 
 
 #### Rule Configuration and Testing:
